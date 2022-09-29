@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<link rel="stylesheet" type="text/css" href="Unicode.css" />
+<script type="text/javascript" src="unicode.js"></script>
+<title>Unicode 15.0 Slide Show</title>
+</head>
+<body onload="Initialise()" onunload="Finalise()">
+<h1>Unicode 15.0 Slide Show</h1>
+<p align="center" id="stats"></p>
+<table id="table1" align="center" border="0">
+<tr>
+<td><form name="startform" action=""><input id="startbutton" type="button" value="Start" onclick="OnStartStopButton()" /></form></td>
+<td><form name="pauseform" action=""><input id="pausebutton" type="button" value="Pause" onclick="OnPauseResume()" /></form></td>
+<td><form name="skipform" action=""><input id="skipbutton" type="button" value="Skip Block" title="Skip to the net block" onclick="OnSkipBlock()" /></form></td>
+<td><form name="randomform" action=""><input id="randombutton" type="button" value="Random Character" title="Display a random character" onclick="OnRandomCharacter()" /></form></td>
+</tr>
+</table>
+<table id="table2" align="center" border="0">
+<tr><td align="center"><span id="numb"></span></td></tr>
+<tr><td align="center" style="height:200px;"><span id="char" style="font-family: Serif; font-size: '24pt'; color: gray;"></span></td></tr>
+<tr><td align="center"><span id="plane"></span></td></tr>
+<tr><td align="center"><span id="block"></span></td></tr>
+<tr><td align="center"><span id="name"></span></td></tr>
+</table>
+<hr/>
+<table id="table3" align="center" border="0">
+<tr>
+<td colspan="2">First Block</td>
+<td colspan="2">Last Block</td>
+</tr>
+<tr>
+<td colspan="2"><form name="startform" action=""><select id="startblock"><option></option></select></form></td>
+<td colspan="2"><form name="endform" action=""><select id="endblock"><option></option></select></form></td>
+</tr>
+<tr>
+<td>Speed</td>
+<td>Font Size</td>
+<td>Font Colour</td>
+<td>Background Colour</td>
+</tr>
+<tr>
+<td><form name="displayspeedform" action=""><select id="displayspeed" onchange="OnNewSpeed()"><option></option></select></form></td>
+<td><form name="fontsizeform" action=""><select id="fontsize" onchange="OnNewSize()"><option></option></select></form></td>
+<td><form name="fontcolourform" action=""><select id="fontcolour" onchange="OnNewFontColour()"><option></option></select></form></td>
+<td><form name="backcolourform" action=""><select id="backcolour" onchange="OnNewBackColour()"><option></option></select></form></td>
+</tr>
+<tr>
+<td><form name="randform" action=""><input id="randomcheck" type="checkbox" title="Check to display random characters when the &quot;Start&quot; button is pushed" onclick="OnCheckRandomCharacters()" />Random Characters</form></td>
+<td><form name="fontform" action=""><input id="fontcheck" type="checkbox" title="Leave unchecked to let the browser choose what fonts to use" onclick="OnCustomFonts()" />Use <a href="FontList.html">Custom Fonts</a></form></td>
+<td colspan="2"><input id="gotobutton" type="button" value="Go To U+" title="Find character by hexadecimal codepoint value" onclick="OnGotoButton()" /> <input id="gototext" type="text" style="width:75px;" title="Enter hexadecimal code point value of character to go to" /></td>
+</tr>
+<tr>
+<td colspan="4"><input id="searchbutton" type="button" value="Search For" title="Search for character by name" onclick="OnSearchButton()" /> <input id="searchtext" type="text" style="width:400px;" autofocus="autofocus" title="Enter character name to search for" /> <input id="searchcheck" type="checkbox" title="Check to only match the exact character name" />Exact Name</td>
+</tr>
+</table>
+<br/>
+<hr/>
+<p class="centre">
+  <a href="index.html">Početna</a> |
+  <a href="map.html" title="Javascript character map">Mapa karaktera</a> |
+  <a href="unicode.html" title="Unikôd slajd šou">Unicode slajd šou</a> |
+  <a href="text.html" title="Konvertuj Latinicu i/ili Grška slova u stilizovan tekst">Unicode stilizovanje teksta</a> |
+  <a href="https://www.babelstone.co.uk/Unicode/whatisit.html" target="_blank">Adresa originalnog projekta</a>
+</p>
+</body>
+</html>

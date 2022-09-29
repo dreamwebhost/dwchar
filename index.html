@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <link rel="stylesheet" type="text/css" href="Unicode.css" />
+    <script type="text/javascript" src="unicode.js"></script>
+    <title>What Unicode character is this ?</title>
+  </head>
+  <body onload="InitialiseConversion()" onunload="FinaliseConversion()">
+    <h1>DreamWeb provera karaktera</h1>
+    <table id="table3" border="0" width="100%" align="center">
+      <tr>
+        <td>
+          <p>Unesite karaktere koji treba da se identifikuju:</p>
+          <p>
+            <input id="edittextin" type="text" style="width:500px;" autofocus="autofocus" title="Enter character or string of characters to convert" />
+            <input id="convertbutton" type="button" value="Identify" title="Show the code points and character names for the specified characters" onclick="OnConvertCharactersToNames()" />
+          </p>
+          <p>
+            <textarea id="edittextout" rows="24" cols="90" class="small serif"></textarea>
+          </p>
+        </td>
+      </tr>
+    </table>
+    <hr />
+    <p>Ovaj alat podržava svih 149,186 karaktera definisanih standardom <a target="_blank" href="https://www.unicode.org/versions/Unicode15.0.0/" title="Unicode 15.0.0">Unicode 15.0</a> (objavljen septembra 2022). String se takođe može identifikovati tako što će se Unicode karakteri dodati na kraju URL adrese iza "string" parametra, kao u sledećem primeru... <a href="?string=🤦Q☃á€香" title="Specify a string of Unicode characters">?string=🤦Q☃á€香</a>. Pogledati <a href="whatisit_doc.html">dokumentaciju</a> za dodatne informacije. </p>
+    <p>Napomena: ovo je prevod interfejsa originalnog projekta koje je dostupan na <a href="https://www.babelstone.co.uk/Unicode/whatisit.html" target="_blank">babelstone.co.uk</a></p>
+    <hr />
+    <p class="centre">
+      <a href="index.html">Početna</a> |
+      <a href="map.html" title="Javascript character map">Mapa karaktera</a> |
+      <a href="unicode.html" title="Unikôd slajd šou">Unicode slajd šou</a> |
+      <a href="text.html" title="Konvertuj Latinicu i/ili Grška slova u stilizovan tekst">Unicode stilizovanje teksta</a> |
+      <a href="https://www.babelstone.co.uk/Unicode/whatisit.html" target="_blank">Adresa originalnog projekta</a>
+    </p>
+  </body>
+</html>

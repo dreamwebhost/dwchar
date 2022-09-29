@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<link rel="stylesheet" type="text/css" href="Unicode.css" />
+<title>Documentation for What Unicode character is this ?</title>
+</head>
+<body>
+<h1>Documentation for <a href="whatisit.html">What Unicode character is this ?</a></h1>
+<br/>
+
+<h3 id="Support">Unicode Support</h3>
+<p>Supports all 149,186 named characters defined in <a target="_blank" href="https://www.unicode.org/versions/Unicode15.0.0/" title="Unicode 1450.0">Unicode 15.0</a> (released September 2022).</p>
+<br/>
+
+<h3 id="Format">Format of Output</h3>
+<p>For each character, its hexadecimal code point value is prefixed U+, followed by the official character name, with any abbreviation in square brackets. For a very few characters with incorrect names, the formal character name alias listed in <a href="https://unicode.org/Public/UNIDATA/NameAliases.txt" title="Unicode Character Database : Name Aliases">NameAliases.txt</a> is noted in parentheses following the character name.  Where available, informative aliases listed in the Unicode code charts are appended in braces.</p>
+<p>For characters which do not have a defined character name (i.e. control characters, private use characters, unpaired surrogates, and noncharacters), the code point label is given in angle brackets in place of the name (e.g. &lt;control-0009&gt; for the tab character).  For control characters, the corresponding name given in ISO/IEC 6429:1992 is given in parentheses.</p>
+<br/>
+
+<h3 id="Tangut">Tangut Ideographs</h3>
+<p>For Tangut ideographs, the algorithmic character name is followed in parentheses by the identifying source reference for the character in <a href="https://unicode.org/Public/UNIDATA/TangutSources.txt" title="Unicode Character Database : Tangut Sources">TangutSources.txt</a>.  Where available, the simple (and sometimes misleading or incomplete) English meaning of the character given in the English index to Lǐ Fànwén's 李範文 <i>Tangut-Chinese Dictionary</i> 夏漢字典 (rev. ed., 2008) is appended in braces.</p>
+<br/>
+
+<h3 id="KSS">Khitan Small Script Characters</h3>
+<p>For Khitan Small Script characters, the reading (in lowercase) and/or the meaning (in capitals) is appended in braces if known. This information is based on (with some modifications): Wu Yingzhe [Wú Yīngzhé 吴英喆] and Juha Janhunen, <a href="https://brill.com/view/title/19551" class="italic">New Materials on the Khitan Small Script: A Critical Edition of Xiao Dilu and Yelü Xiangwen</a> (Folkestone: Global Oriental, 2010).</p>
+<br/>
+
+<h3 id="Hieroglyphs">Egyptian Hieroglyphs</h3>
+<p>For Egyptian hieroglyphs, a description of the glyph is appended in braces.  Most of the glyph descriptions are derived (with some minor modifications) from the sign-list in Alan Gardiner's <i>Egyptian Grammar</i> (3rd ed., 1957).  The descriptions for characters not included in Gardiner's sign-list are gratefully adapted from <a href="https://mjn.host.cs.st-andrews.ac.uk/" title="Mark-Jan Nederhof">Mark-Jan Nederhof's</a> <a href="https://mjn.host.cs.st-andrews.ac.uk/egyptian/unicode/tablemain.html" title="The 1071 hieroglyphs from Unicode 5.2">The 1071 hieroglyphs from Unicode 5.2</a>.</p>
+<br/>
+
+<h3 id="CJKU"> Unified Ideographs</h3>
+<p>For CJK unified ideographs, only the algorithmic character name is currently given, but additional information may be provided in the future.</p>
+<br/>
+
+<h3 id="CJKC">CJK Compatibility Ideographs</h3>
+<p>For CJK compatibility ideographs, the algorithmic character name is followed by the variation sequence mapping for the corresponding CJK unified ideograph.</p>
+<br/>
+
+<h3 id="Params">URL parameters</h3>
+<p>The following URL parameters are supported:</p>
+<ul>
+<li>Specify a <b>single</b> Unicode character, e.g. <a href="https://www.babelstone.co.uk/Unicode/whatisit.html?char=🤦" class="code">https://www.babelstone.co.uk/​Unicode/​whatisit.html?​char=🤦</a> (should work for BMP and supra-BMP characters on all major browsers)</li>
+<li>Specify a string of Unicode characters, e.g. <a href="https://www.babelstone.co.uk/Unicode/whatisit.html?string=🤦Q☃á€香" class="code">https://www.babelstone.co.uk/​Unicode/​whatisit.html?​string=🤦Q☃á€香</a> (should work on all major browsers)</li>
+<li>Specify a string of Unicode characters in UTF-16 encoding, e.g. <a href="https://www.babelstone.co.uk/Unicode/whatisit.html?unicode=🤦Q☃á€香" class="code">https://www.babelstone.co.uk/​Unicode/​whatisit.html?​unicode=🤦Q☃á€香</a> (works for browsers such as Internet Explorer and Edge which use UTF-16 encoding)</li>
+<li>Specify a string of Unicode characters as UTF-16 escape sequences, e.g. <a href="https://www.babelstone.co.uk/Unicode/whatisit.html?unicode=%uD83E%uDD26%u0051%u2603%u00E1%u20AC%u9999" class="code">https://www.babelstone.co.uk/​Unicode/​whatisit.html?​unicode=%uD83E%uDD26%u0051%u2603%u00E1%u20AC%u9999</a> (should work on all major browsers)</li>
+<li>Specify a string of Unicode characters in UTF-8 encoding, e.g. <a href="https://www.babelstone.co.uk/Unicode/whatisit.html?utf8=🤦Q☃á€香" class="code">https://www.babelstone.co.uk/​Unicode/​whatisit.html?​utf8=🤦Q☃á€香</a> (works for browsers such as Google Chrome and Firefox which use UTF-8 encoding)</li>
+<li>Specify a string of Unicode characters as UTF-8 escape sequences, e.g. <a href="https://www.babelstone.co.uk/Unicode/whatisit.html?utf8=%F0%9F%A4%A6%51%E2%98%83%C3%A1%E2%82%AC%E9%A6%99" class="code">https://www.babelstone.co.uk/​Unicode/​whatisit.html?​utf8=%F0%9F%A4%A6%51%E2%98%83%C3%A1%E2%82%AC%E9%A6%99</a> (should work on all major browsers)</li>
+</ul>
+<br/>
+<hr/>
+<p class="centre">
+  <a href="index.html">Početna</a> |
+  <a href="map.html" title="Javascript character map">Mapa karaktera</a> |
+  <a href="unicode.html" title="Unikôd slajd šou">Unicode slajd šou</a> |
+  <a href="text.html" title="Konvertuj Latinicu i/ili Grška slova u stilizovan tekst">Unicode stilizovanje teksta</a> |
+  <a href="https://www.babelstone.co.uk/Unicode/whatisit.html" target="_blank">Adresa originalnog projekta</a>
+</p>
+</body>
+</html>
